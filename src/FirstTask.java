@@ -1,5 +1,5 @@
 
-public class Main {
+public class FirstTask {
     public static void main(String[] args) {
 
         System.out.println(convert(5));
