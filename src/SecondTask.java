@@ -34,8 +34,8 @@ public class SecondTask {
         System.out.println(pseudoHash(10));
         System.out.println(pseudoHash(0));
         System.out.println(" ");
-        System.out.println(botHelper("Hello, I`m under the water, please help me"));
-        System.out.println(botHelper("Two pepperoni pizzas please"));
+        System.out.println(botHelper("help"));
+        System.out.println(botHelper("I am helper"));
         System.out.println(" ");
         System.out.println(isAnagram("listen", "silent"));
         System.out.println(isAnagram("eleven plus two", "twelve plus one"));
@@ -130,7 +130,7 @@ public class SecondTask {
     }
 
     public static String pseudoHash(int length){
-        String alphabet = "abcdefghijklmnopqrstuvwxyz0123456789";
+        String alphabet = "abcdef0123456789";
 
         String result = "";
         for (int index = 0; index < length; index++){
@@ -138,8 +138,27 @@ public class SecondTask {
         }
         return result;
     }
-    public static String botHelper(String string){
-        return string.toLowerCase().contains("help") ? "Calling for a staff member" : "Keep waiting";
+    public static String botHelper(String string) {
+        string = string.toLowerCase();
+
+        int index = string.indexOf("help");
+        if (index == -1) {
+            return "Keep waiting";
+        }
+
+        for (char firstLetter = 65; firstLetter <= 90; firstLetter++) {
+            String newString = (firstLetter + "help").toLowerCase();
+            if (string.contains(newString)) {
+                return "Keep waiting";
+            }
+        }
+        for (char secondLetter = 65; secondLetter <= 90; secondLetter++) {
+            String newString = ("help" + secondLetter).toLowerCase();
+            if (string.contains(newString)) {
+                return "Keep waiting";
+            }
+        }
+        return "Calling for a staff member";
     }
 
     public static boolean isAnagram(String firstString, String secondString){
