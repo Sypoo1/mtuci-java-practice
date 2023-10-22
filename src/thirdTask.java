@@ -1,6 +1,4 @@
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class thirdTask {
     public static void main(String[] args) {
@@ -187,7 +185,9 @@ public class thirdTask {
         int n = matrix[0].length;
         for (int mainRow = 0; mainRow < n; mainRow++){
             int newElement = 0;
-            for (int sideRow = 0; sideRow < n; sideRow++) if (sideRow != mainRow) newElement += matrix[sideRow][mainRow];
+            for (int sideRow = 0; sideRow < n; sideRow++)
+                if (sideRow != mainRow)
+                    newElement += matrix[sideRow][mainRow];
             matrix[mainRow][mainRow] = (int) Math.round((double) newElement / (n - 1));
         }
         return matrix;
