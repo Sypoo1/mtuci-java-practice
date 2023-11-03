@@ -118,7 +118,7 @@ public class fourthTask {
                 currentRow = "" + string.charAt(index + 1);
             }
         }
-
+        currentRow = "" + string.charAt(0);
         for (int index = 0; index < stringLength - 1; index++){
             char currentChar = upperString.charAt(index);
             char nextChar = upperString.charAt(index + 1);
@@ -181,7 +181,6 @@ public class fourthTask {
                 number += 100 * stringToNum(element);
                 words.remove(0);
                 words.remove(0);
-
                 continue;
             }
             if (element.contains("ty")){
