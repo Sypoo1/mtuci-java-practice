@@ -145,7 +145,6 @@ public class fifthTask {
     // 4
     public static int totalPoints(String[] words, String originalWord) {
         int points = 0;
-        ArrayList<String> maybeAnagrams = new ArrayList<>();
         HashMap<Character, Integer> letters = new HashMap<>();
         for (char letter: originalWord.toCharArray()){
             letters.put(letter, letters.getOrDefault(letter,0) + 1);
