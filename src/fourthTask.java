@@ -181,6 +181,7 @@ public class fourthTask {
                 number += 100 * stringToNum(element);
                 words.remove(0);
                 words.remove(0);
+
                 continue;
             }
             if (element.contains("ty")){
