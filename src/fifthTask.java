@@ -11,53 +11,54 @@ import java.util.Locale;
 import java.util.Map;
 public class fifthTask {
     public static void main(String[] args) {
-//        System.out.println("1) sameLetterPattern");
-//        System.out.println(sameLetterPattern("ABAB", "CDCD"));
-//        System.out.println(sameLetterPattern("ABCBA", "BCDCB"));
-//        System.out.println(sameLetterPattern("FFGG", "CDCD"));
-//        System.out.println(sameLetterPattern("FFFF", "ABCD"));
-//        System.out.println("2) spiderVsFly");
-//        System.out.println(spiderVsFly("H3", "E2"));
-//        System.out.println(spiderVsFly("A4", "B2"));
-//        System.out.println(spiderVsFly("A4", "C2"));
-//        System.out.println("3) digitsCount");
-//        System.out.println(digitsCount(4666));
-//        System.out.println(digitsCount(544));
-//        System.out.println(digitsCount(121317));
-//        System.out.println(digitsCount(0));
-//        System.out.println(digitsCount(12345));
-//        System.out.println(digitsCount(1289396387328L));
+        System.out.println("1) sameLetterPattern");
+        System.out.println(sameLetterPattern("ABAB", "CDCD"));
+        System.out.println(sameLetterPattern("ABCBA", "BCDCB"));
+        System.out.println(sameLetterPattern("FFGG", "CDCD"));
+        System.out.println(sameLetterPattern("FFFF", "ABCD"));
+        System.out.println("2) spiderVsFly");
+        System.out.println(spiderVsFly("H3", "E2"));
+        System.out.println(spiderVsFly("A4", "B2"));
+        System.out.println(spiderVsFly("A4", "C2"));
+        System.out.println("3) digitsCount");
+        System.out.println(digitsCount(4666));
+        System.out.println(digitsCount(544));
+        System.out.println(digitsCount(121317));
+        System.out.println(digitsCount(0));
+        System.out.println(digitsCount(12345));
+        System.out.println(digitsCount(1289396387328L));
         System.out.println("4) totalPoints");
         System.out.println(totalPoints(new String[] { "cat", "create", "sat" }, "caster"));
         System.out.println(totalPoints(new String[] { "trance", "recant" }, "recant"));
         System.out
                 .println(totalPoints(new String[] { "dote", "dotes", "toes", "set", "dot", "dots", "sted" }, "tossed"));
 
-//        System.out.println("5) sumsUp");
-//        printPair(sumsUp(new int[] { 1, 2, 3, 4, 5 }));
-//        printPair(sumsUp(new int[] { 1, 2, 3, 7, 9 }));
-//        printPair(sumsUp(new int[] { 10, 9, 7, 2, 8 }));
-//        printPair(sumsUp(new int[] { 1, 6, 5, 4, 8, 2, 3, 7 }));
-//        System.out.println("6) takeDownAverage");
-//        System.out.println(takeDownAverage(new String[] { "95%", "83%", "90%", "87%", "88%", "93%" }));
-//        System.out.println(takeDownAverage(new String[] { "10%" }));
-//        System.out.println(takeDownAverage(new String[] { "53%", "79%" }));
-//        System.out.println("7) caesarCipher");
-//        System.out.println(caesarCipher("encode", "hello world", 3));
-//        System.out.println(caesarCipher("decode", "EPQSWX PEWX XEWO!", 4));
-//        System.out.println(caesarCipher("decode", "ABQSWX PEWX XEWO!", 4));
-//        System.out.println("8) setSetup(сочетания)");
-//        System.out.println(setSetup(5, 3));
-//        System.out.println(setSetup(7, 3));
-//        System.out.println("9) timeDifference");
-//        System.out.println(timeDifference("Los Angeles", "April 1, 2011 23:23", "Canberra"));
-//        System.out.println(timeDifference("London", "July 31, 1983 23:01", "Rome"));
-//        System.out.println(timeDifference("New York", "December 31, 1970 13:40", "Beijing"));
-//        System.out.println("10) isNew");
-//        System.out.println(isNew(3));
-//        System.out.println(isNew(30));
-//        System.out.println(isNew(321));
-//        System.out.println(isNew(1023));
+        System.out.println("5) sumsUp");
+        System.out.println((Arrays.deepToString(sumsUp(new int[]{1, 2, 3, 4, 5}))));
+        System.out.println((Arrays.deepToString(sumsUp(new int[]{1, 2, 3, 7, 9}))));
+        System.out.println((Arrays.deepToString(sumsUp(new int[]{10, 9, 7, 2, 8}))));
+        System.out.println(Arrays.deepToString(sumsUp(new int[]{1, 6, 5, 4, 8, 2, 3, 7})));
+        System.out.println("6) takeDownAverage");
+        System.out.println(takeDownAverage(new String[] { "95%", "83%", "90%", "87%", "88%", "93%" }));
+        System.out.println(takeDownAverage(new String[] { "10%" }));
+        System.out.println(takeDownAverage(new String[] { "53%", "79%" }));
+        System.out.println("7) caesarCipher");
+        System.out.println(caesarCipher("encode", "hello world", 3));
+        System.out.println(caesarCipher("encode", "almost last task!", 4));
+        System.out.println(caesarCipher("decode", "EPQSWX PEWX XEWO!", 4));
+        System.out.println(caesarCipher("decode", "ABQSWX PEWX XEWO!", 4));
+        System.out.println("8) setSetup(сочетания)");
+        System.out.println(setSetup(5, 3));
+        System.out.println(setSetup(7, 3));
+        System.out.println("9) timeDifference");
+        System.out.println(timeDifference("Los Angeles", "April 1, 2011 23:23", "Canberra"));
+        System.out.println(timeDifference("London", "July 31, 1983 23:01", "Rome"));
+        System.out.println(timeDifference("New York", "December 31, 1970 13:40", "Beijing"));
+        System.out.println("10) isNew");
+        System.out.println(isNew(3));
+        System.out.println(isNew(30));
+        System.out.println(isNew(321));
+        System.out.println(isNew(123));
     }
 
     public static boolean sameLetterPattern(String s1, String s2) {
@@ -185,30 +186,23 @@ public class fifthTask {
         return ans.toArray(new int[ans.size()][2]);
     }
 
-    public static void printPair(int[][] a) {
-        System.out.print("[ ");
-        for (int[] i : a) {
-            System.out.print("[" + i[0] + ", " + i[1] + "] ");
-        }
-        System.out.println("]");
-    }
-
     // 6
-    public static String takeDownAverage(String[] s) {
-        int sum = 0, n = s.length;
-        for (String i : s) {
-            sum += Integer.parseInt(i.replaceFirst("%", ""));
+    public static String takeDownAverage(String[] results) {
+        int summa = 0;
+        int students = results.length;
+        for (String result : results) {
+            summa += Integer.parseInt(result.replaceFirst("%", ""));
         }
-        int ans = Math.round((float) sum / (float) n) - 5 * (n + 1);
-        return "" + ans + "%";
+        int answer = Math.round((float) summa / (float) students) - 5 * (students + 1);
+        return "" + answer + "%";
     }
 
     // 7
     public static String caesarCipher(String mode, String input, int shift) {
-        if (mode == "encode") {
-            // shift *= 1;
-        } else if (mode == "decode") {
-            shift *= -1;
+        if (Objects.equals(mode, "encode")) {
+            shift = shift * 1;
+        } else if (Objects.equals(mode, "decode")) {
+            shift = shift * -1;
         } else {
             return "error";
         }
@@ -251,19 +245,16 @@ public class fifthTask {
         LocalDateTime origT = null;
         try {
             origT = LocalDateTime.parse(timeA, formatter1);
-            // System.out.println(origT);
         } catch (DateTimeParseException e) {
             return "error while parsing";
         }
 
         float difA = (timeOffsets.get(cityB) - timeOffsets.get(cityA));
-        // LocalDateTime dt = LocalDateTime.of(2023, 10, 20, 15, 30, 0);
         if ((int) difA != difA) {
             origT = origT.plusMinutes(30);
         }
-        origT = origT.plusHours((int) Math.floor(difA));
+        origT = origT.plusHours((int) difA);
         DateTimeFormatter formatter2 = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
-        // System.out.println(origT.format(formatter2));
         return origT.format(formatter2);
     }
 
@@ -273,6 +264,7 @@ public class fifthTask {
         for (char c : Integer.toString(n).toCharArray()) {
             digits[c - '0']++;
         }
+
         StringBuilder build = new StringBuilder();
         if (digits[0] > 0) {
             for (int i = 1; i < 10; i++) { // одна цифра перед нулями
