@@ -32,6 +32,9 @@ public class fifthTask {
         System.out.println(digitsCount(1289396387328L));
         System.out.println("4) totalPoints");
         System.out.println(totalPoints(new String[] { "cat", "create", "sat" }, "caster"));
+        System.out.println(totalPoints(new String[] { "cat", "creats", "sat" }, "caster"));
+        System.out.println(totalPoints(new String[] { "cat", "creats", "caster", "sat" }, "caster"));
+        System.out.println(totalPoints(new String[] { "cat", "caster", "creats", "sat" }, "caster"));
         System.out.println(totalPoints(new String[] { "trance", "recant" }, "recant"));
         System.out
                 .println(totalPoints(new String[] { "dote", "dotes", "toes", "set", "dot", "dots", "sted" }, "tossed"));
@@ -171,14 +174,23 @@ public class fifthTask {
     // 4
     public static int totalPoints(String[] words, String originalWord) {
         int points = 0;
+
         HashMap<Character, Integer> letters = new HashMap<>();
         for (char letter: originalWord.toCharArray()){
             letters.put(letter, letters.getOrDefault(letter,0) + 1);
         }
         words = new HashSet<String>(Arrays.asList(words)).toArray(new String[0]); // delete duplicates from words
 
+        boolean haveOriginal = false;
+        for (String word : words){
+            if (Objects.equals(word, originalWord)){
+                haveOriginal = true;
+                break;
+            }
+        }
         wordsLoop:
         for (String word : words){
+
             HashMap<Character, Integer> tempLetters = new HashMap<>();
             for (char letter : word.toCharArray()){
                 tempLetters.put(letter, tempLetters.getOrDefault(letter,0) + 1);
@@ -192,7 +204,9 @@ public class fifthTask {
             if (word.length() == 3) points += 1;
             else if (word.length() == 4) points += 2;
             else if (word.length() == 5) points += 3;
-            else if (word.length() == 6) points += 54;
+            else if (word.length() == 6) {
+                points = points + (haveOriginal ? 54 : 4);
+            }
         }
         return points;
     }
